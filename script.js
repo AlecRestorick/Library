@@ -1,3 +1,12 @@
+
+
+
+
+
+
+
+
+
 const bookForm = document.getElementById('bookForm');
 const titleInput = document.getElementById('title');
 const authorInput = document.getElementById('author');
@@ -236,5 +245,29 @@ function renderLibrary() {
 bookForm.addEventListener('submit', addBookToLibrary);
 
 renderLibrary();
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const openLibraryBtn = document.getElementById('openLibraryBtn');
+    const libraryContainer = document.getElementById('libraryContainer');
+    const libraryToggleWrapper = document.querySelector('.library-toggle-wrapper');
+
+    openLibraryBtn.addEventListener('click', () => {
+        if (libraryContainer.style.display === 'none' || libraryContainer.style.display === '') {
+
+            libraryContainer.style.display = 'block';
+            libraryToggleWrapper.classList.add('library-open');
+            openLibraryBtn.textContent = 'Close Library';
+            
+
+            renderLibrary();
+        } else {
+
+            libraryContainer.style.display = 'none';
+            libraryToggleWrapper.classList.remove('library-open');
+            openLibraryBtn.textContent = 'Open Library';
+        }
+    });
+});
 
 

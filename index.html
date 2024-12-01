@@ -7,7 +7,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="library-container">
+
+    <div class="library-toggle-wrapper">
+        <button id="openLibraryBtn" class="open-library-btn">Open Library</button>
+    </div>
+
+
+    <div class="library-container" id="libraryContainer" style="display: none;">
         <div class="main-content">
             <div class="container">
                 <h1>Library</h1>
@@ -42,7 +48,7 @@
             </div>
             
             <ul id="bookList">
-                <!-- Book list will be dynamically generated here -->
+
             </ul>
         </div>
     </div>
