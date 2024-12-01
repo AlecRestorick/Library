@@ -80,6 +80,8 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+    min-height: 100vh;
+    place-items: center;
 }
 
 .container {
@@ -190,6 +192,18 @@ body {
     width: 100%;
 }
 
+#bookList:empty + .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+}
+
 .book-card {
     background-color: white;
     border: 1px solid var(--secondary-color);
@@ -274,8 +288,8 @@ body {
 
 @media screen and (min-width: 768px) {
     .main-content {
-        grid-template-columns: 300px 1fr;
-        align-items: start;
+        grid-template-columns: 1fr;
+        place-items: center;
     }
 }
 
